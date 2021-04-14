@@ -25,7 +25,7 @@ window.addEventListener('load', () => {
                 const zoneName = data.name;
                 const celsius = (temp-273.15).toFixed(1);
                 //Set DOM Element from the API
-                console.log(celsius);
+               
 
                 
                 locationTimezone.textContent = zoneName;
@@ -33,6 +33,8 @@ window.addEventListener('load', () => {
                 temperatureDegree.textContent = celsius;
                 
                 locationIcon.innerHTML = `<img src="icons/${icon}.png"></img>`;
+
+                console.log(locationIcon.innerHTML);
             });
         });
         
