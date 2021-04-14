@@ -5,6 +5,7 @@ window.addEventListener('load', () => {
     let temperatureDegree = document.querySelector('.temperature-degree');
     let locationTimezone = document.querySelector('.location-timezone');
     let locationIcon = document.querySelector('.weather-icon');
+    const temperatureScale = document.querySelector('.temperature-value p');
     
 
     if(navigator.geolocation) {
@@ -23,18 +24,34 @@ window.addEventListener('load', () => {
                 const {temp} = data.main;
                 const [{description, icon}] = data.weather;
                 const zoneName = data.name;
+
                 const celsius = (temp-273.15).toFixed(1);
+
+                temperatureDegree.textContent = celsius;
+                const f = (celsius * 1.8+32).toFixed(1);
+                
                 //Set DOM Element from the API
                
 
                 
                 locationTimezone.textContent = zoneName;
                 temperatureDescription.textContent = description;
-                temperatureDegree.textContent = celsius;
+                
                 
                 locationIcon.innerHTML = `<img src="icons/${icon}.png"></img>`;
 
-                console.log(locationIcon.innerHTML);
+                console.log(f);
+
+                temperatureScale.addEventListener('click', () => {
+                    if (temperatureScale.textContent === 'F') {
+                        temperatureScale.textContent = 'C';
+                        temperatureDegree.textContent = celsius;
+                        
+                    }else {
+                        temperatureScale.textContent = 'F';
+                        temperatureDegree.textContent = f;
+                    }
+                })
             });
         });
         
