@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 *{
     font-family: "Rimouski";
 }
@@ -28,6 +30,7 @@ body{
 }
 
 .app-title p{
+    font-family: 'Roboto', sans-serif;
     text-align: center;
     padding: 15px;
     margin: 0 auto;
@@ -75,6 +78,7 @@ body{
 }
 
 .temperature-value h2{
+    
     padding: 0;
     margin: 0;
     color: #293251;
@@ -83,9 +87,7 @@ body{
     cursor: pointer;
 }
 
-.temperature-value h2:hover{
-    
-}
+
 
 .temperature-value p{
     color: #293251;
@@ -93,6 +95,8 @@ body{
 }
 
 .temperature-description{
+    font-family: 'Roboto', sans-serif;
+
     padding: 8px;
     margin: 0;
     color: #293251;
@@ -102,11 +106,10 @@ body{
 
 
 
-.location{
-    
-}
+
 
 .location h2{
+    font-family: 'Roboto', sans-serif;
     margin-top: 15px;
     padding: 0;
     color: #293251;
