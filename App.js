@@ -32,7 +32,7 @@ window.addEventListener('load', () => {
                 temperatureDescription.textContent = description;
                 temperatureDegree.textContent = celsius;
                 
-                locationIcon.innerHTML = `<img src="./icons/${icon}.png"></img>`;
+                locationIcon.innerHTML = `<img src="icons/${icon}.png"></img>`;
             });
         });
         
